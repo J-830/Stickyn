@@ -2,14 +2,14 @@
   "name": "stickyn",
   "version": "1.0.0",
   "description": "Simple portable sticky note app for Windows",
-  "main": "src/main.js",
+  "main": "./src/main.js",   
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win portable",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "devDependencies": {
-    "electron": "^24.3.0",
+    "electron": "^24.8.8",    
     "electron-builder": "^24.6.4"
   },
   "dependencies": {
@@ -19,8 +19,14 @@
     "appId": "com.stickyn.app",
     "productName": "StickyN",
     "directories": {
-      "output": "dist"
+      "output": "dist",
+      "buildResources": "build",  
+      "app": "."               
     },
+    "files": [                 
+      "src/**/*",
+      "package.json"
+    ],
     "win": {
       "target": "portable"
     }
