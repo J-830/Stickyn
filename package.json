@@ -10,10 +10,7 @@
     "clean": "rimraf dist node_modules package-lock.json",
     "rebuild": "npm run clean && npm install",
     "test:build": "npm run build && start dist/*.exe",
-    "verify": "npm run clean && npm install && npm run build",
-    "prepare": "npm run clean && npm install --package-lock-only"
-  },
-}
+    "verify": "npm run clean && npm install && npm run build"
   },
   "dependencies": {
     "@notionhq/client": "^1.0.4",
