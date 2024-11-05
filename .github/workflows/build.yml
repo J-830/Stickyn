@@ -2,9 +2,12 @@ name: Build Windows Portable
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - 'fix/**'  # fix/ 로 시작하는 모든 브랜치 포함
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
 
 jobs:
   build:
