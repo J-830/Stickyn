@@ -1,40 +1,28 @@
 {
   "name": "stickyn",
   "version": "1.0.0",
-  "description": "Simple sticky note app with Notion sync",
+  "description": "Simple portable sticky note app for Windows",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon --watch src --exec electron .",
     "build": "electron-builder --win portable",
-    "clean": "rimraf dist node_modules package-lock.json",
-    "rebuild": "npm run clean && npm install",
-    "test:build": "npm run build && start dist/*.exe",
-    "verify": "npm run clean && npm install && npm run build"
-  },
-  "dependencies": {
-    "@notionhq/client": "^1.0.4",
-    "electron": "^28.0.0",
-    "simple-node-logger": "^21.8.12"
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "devDependencies": {
-    "electron-builder": "^24.9.1",
-    "nodemon": "^2.0.22",
-    "rimraf": "^5.0.5"
+    "electron": "^24.13.3",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14"
   },
   "build": {
     "appId": "com.stickyn.app",
-    "productName": "Stickyn",
-    "win": {
-      "target": "portable",
-      "icon": "src/assets/icon.ico"
-    },
-    "files": [
-      "src/**/*",
-      "package.json"
-    ],
+    "productName": "StickyN",
     "directories": {
       "output": "dist"
+    },
+    "win": {
+      "target": "portable"
     }
   }
 }
