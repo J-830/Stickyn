@@ -1,29 +1,28 @@
 {
   "name": "stickyn",
   "version": "1.0.0",
-  "description": "Simple sticky note app for Windows with Notion sync",
-  "main": "src\\main.js",
+  "description": "Simple portable sticky note app for Windows",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder --win portable",
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "build": {
-    "appId": "com.stickyn.app",
-    "win": {
-      "target": "portable",
-      "icon": "build\\icon.ico"
-    },
-    "portable": {
-      "artifactName": "Stickyn.exe"
-    }
+  "devDependencies": {
+    "electron": "^24.13.3",
+    "electron-builder": "^24.6.4"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14"
   },
-  "devDependencies": {
-    "electron": "^28.0.0",
-    "electron-builder": "^24.0.0"
-  },
-  "author": "",
-  "license": "MIT"
+  "build": {
+    "appId": "com.stickyn.app",
+    "productName": "StickyN",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable"
+    }
+  }
 }
