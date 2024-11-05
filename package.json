@@ -9,7 +9,7 @@
     "test": "echo \"No tests specified\" && exit 0"
   },
   "devDependencies": {
-    "electron": "^24.13.3",
+    "electron": "^24.3.0",          // 버전 수정
     "electron-builder": "^24.6.4"
   },
   "dependencies": {
