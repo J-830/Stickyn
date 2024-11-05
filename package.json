@@ -8,7 +8,12 @@
     "dev": "nodemon --watch src --exec electron .",
     "build": "electron-builder --win portable",
     "clean": "rimraf dist node_modules package-lock.json",
-    "rebuild": "npm run clean && npm install"
+    "rebuild": "npm run clean && npm install",
+    "test:build": "npm run build && start dist/*.exe",
+    "verify": "npm run clean && npm install && npm run build",
+    "prepare": "npm run clean && npm install --package-lock-only"
+  },
+}
   },
   "dependencies": {
     "@notionhq/client": "^1.0.4",
